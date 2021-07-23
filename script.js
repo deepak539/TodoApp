@@ -96,6 +96,9 @@ function displayTodo(todo){
     cb.addEventListener('change', () => {
       updateLs(cb);
       text.classList.toggle('complete');
+      if(activeTodos.classList.contains('active')){
+        removeTodo(listItem);
+      }
     })
 }
 
